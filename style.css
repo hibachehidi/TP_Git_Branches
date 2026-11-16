@@ -1,54 +1,91 @@
+
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-font-family: Arial, sans-serif;
-background-color: #f1f5f9;
-margin: 0;
-padding: 40px;
-
-
-
+    font-family: Arial, sans-serif;
+    background-color: #e0f2fe;
+    margin: 0;
+    padding: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-max-width: 500px;
-margin: auto;
-background-color: white;
-padding: 30px;
-border-radius: 12px;
-text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+
+    /* Ombre de la carte */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-color: blue;
-font-size: 28px;
+    color: #2563eb;
+    font-size: 28px;
 }
 
 label {
-display: block;
-margin-top: 15px;
+    display: block;
+    margin-top: 15px;
 }
 
 input {
-width: 100%;
-padding: 12px;
-
-margin-top: 8px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 button {
-margin-top: 20px;
-padding: 12px 25px;
-background-color: #2563eb;
-color: white;
-border: none;
-border-radius: 6px;
-cursor: pointer;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    /* Animation */
+    transition: 0.3s;
+}
+
+/* Animation au survol */
+button:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
 }
 
 #resultat {
-margin-top: 20px;
-font-weight: bold;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* Adaptation aux mobiles */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 100%;
+    }
 }
